@@ -28,6 +28,15 @@
      <input type="time" id="time" name="time" required>
 
      <button types="submit">Book Now</button>
+    <script>
+     function confirmBooking(event) {
+      event.preventDefault(); // stop page refresh
+      alert("Booking successful");
+      return false;
+
+     }
+       
+    </script>
    </form>
  </body>
 </html>
