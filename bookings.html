@@ -27,16 +27,10 @@
      <label for="time"> Time of booking:</label><br>
      <input type="time" id="time" name="time" required>
 
-     <button types="submit">Book Now</button>
-    <script>
-     function confirmBooking(event) {
-      event.preventDefault(); // stop page refresh
-      alert("Booking successful");
-      return false;
-
-     }
+     <form onsubmit="return bookNow(event)">
+     <input!
+    
        
     </script>
-   </form>
  </body>
 </html>
