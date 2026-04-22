@@ -27,10 +27,28 @@
      <label for="time"> Time of booking:</label><br>
      <input type="time" id="time" name="time" required>
 
-     <form onsubmit="return bookNow(event)">
-     <input!
+     <label for="message">Message:</label><br>
+     <textarea id="message" required></textarea><br><br>
+
+     <button type="submit">Submit</button>
+   </form>
+   <p id="notification" style="color: green; font-weight: bold;"></p>
+   <script>
+     function showMessage(event) {
+        event.preventDefault(); // stops page refresh
+        document.getElementByID("notifictation").innerText =
+         "Submission successful Thank you for your feedback.";
+
+        // Optional: clear form after submit
+        document.querySelector("form").reset();
+         return false;
+     }
+    
+    
+   </script>
+   
     
        
-    </script>
+    
  </body>
 </html>
