@@ -12,7 +12,8 @@
   <body>
       <h1>Remember to give us a feedback</h1>
       <p>Your feedback helps us know what to improve and change at MB Pretty Tips and Beats</p>
-    <form action="submit_feedback.php" method="post">
+    
+    <form action="https://formspree.io/f/xwvaqvqq" method="POST" onsubmit="showMessage()">
       <label for="rating">Rating:</label><br>
       <select id="rating" name="rating">
         <option value="excellent">Excellent</option>
@@ -20,11 +21,20 @@
         <option value="average">Average</option>
         <option value="poor">Poor</option>
       </select><br><br>
-      <form action="https://formspree.io/f/xwvaqvqq" method="POST">
+      
       <label for="message">Your Feedback:</label><br>
-        <textarea ids="message" name="message" required></textarea><br>
+        <textarea ids="message" name="message" required></textarea><br><br>
+      
         <button type="submit">Submit Feedback</button>
       
     </form>
+    <p id="successMsg" style="color: green; font-weight: bold;"></p>
+    <script>
+      function showMessage() {
+        document.getElementById("successMsg").innerText =
+          "Feedback submitted successfully!";
+      }
+      
+    </script>
   </body>
 </html>
